@@ -42,6 +42,10 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
+# auth gem
+gem "devise" #read docs
+#rails generate devise MODEL 
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
@@ -62,6 +66,11 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+
+  # debugging gems
+  # gem pry #binding.pry
+  # gem byebug
+  # gem pry-rails
 end
 
 group :test do

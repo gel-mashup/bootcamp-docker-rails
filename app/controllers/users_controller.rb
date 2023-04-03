@@ -1,6 +1,11 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user! 
+
   def index
     @users = User.all
+    # @current_user = current_user
+    # byebug
+    # @users
   end
 
   def new
@@ -40,6 +45,6 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:firstname, :lastname, :username, :password)
+    params.require(:user).permit(:email, :firstname, :lastname, :username, :password)
   end
 end

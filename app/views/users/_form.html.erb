@@ -27,6 +27,15 @@
     </div>
 
     <div>
+        <%= form.label :email %><br>
+        <%= form.text_field :email %><br>
+
+        <% @user.errors.full_messages_for(:email).each do |message| %>
+            <div><%= message %></div>
+        <% end %>
+    </div>
+
+    <div>
         <%= form.label :password %><br>
         <%= form.password_field :password %><br>
 
